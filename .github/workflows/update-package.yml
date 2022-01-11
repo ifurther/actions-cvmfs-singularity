@@ -1,0 +1,12 @@
+name: 'build-update'
+on: # rebuild any PRs and main branch changes
+  pull_request:
+  push:
+    branches:
+      - main
+      - 'releases/*'
+
+jobs:
+  build:
+    - name: TypeScript Container Action Template
+      uses: kevinpollet/typescript-container-action-template@v1
